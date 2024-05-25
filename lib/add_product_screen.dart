@@ -86,6 +86,7 @@ class _AddProductState extends State<AddProduct> {
                       child: TextFormField(
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         controller: _unitPriceTEcontroller,
+                        keyboardType: TextInputType.number,
                         decoration: InputDecoration(labelText: 'Unit Price'),
                         validator: (String? value) {
                           if (value == null || value.trim().isEmpty) {
@@ -100,6 +101,7 @@ class _AddProductState extends State<AddProduct> {
                       child: TextFormField(
                           autovalidateMode: AutovalidateMode.onUserInteraction,
                           controller: _quantityTEcontroller,
+                          keyboardType: TextInputType.number,
                           decoration: InputDecoration(labelText: 'Quantity'),
                           validator: (String? value) {
                             if (value == null || value.trim().isEmpty) {
@@ -113,6 +115,7 @@ class _AddProductState extends State<AddProduct> {
                       child: TextFormField(
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         controller: _totalPriceTEcontroller,
+                        keyboardType: TextInputType.number,
                         decoration: InputDecoration(labelText: 'Total Price'),
                         validator: (String? value) {
                           if (value == null || value.trim().isEmpty) {

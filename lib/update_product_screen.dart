@@ -50,14 +50,14 @@ class _UpdateProductState extends State<UpdateProduct> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add new product'),
+        title: Text('Update Product'),
       ),
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.all(16),
             child: Text(
-              'Add new product',
+              'Update Product',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
             ),
           ),
@@ -99,6 +99,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                       padding: const EdgeInsets.all(16),
                       child: TextFormField(
                         autovalidateMode: AutovalidateMode.onUserInteraction,
+                        keyboardType: TextInputType.number,
                         controller: _unitPriceTEcontroller,
                         decoration: InputDecoration(labelText: 'Unit Price'),
                         validator: (String? value) {
@@ -114,6 +115,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                       child: TextFormField(
                           autovalidateMode: AutovalidateMode.onUserInteraction,
                           controller: _quantityTEcontroller,
+                          keyboardType: TextInputType.number,
                           decoration: InputDecoration(labelText: 'Quantity'),
                           validator: (String? value) {
                             if (value == null || value.trim().isEmpty) {
@@ -127,6 +129,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                       child: TextFormField(
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         controller: _totalPriceTEcontroller,
+                        keyboardType: TextInputType.number,
                         decoration: InputDecoration(labelText: 'Total Price'),
                         validator: (String? value) {
                           if (value == null || value.trim().isEmpty) {
